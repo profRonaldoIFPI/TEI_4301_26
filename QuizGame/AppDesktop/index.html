@@ -1,60 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Game</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-    <ul>
+      <ul>
         <li>
-        <a>Opções</a>
+          <a>Opções</a>
         </li>
-    </ul>
+      </ul>
     </header>
     <div class="menu">
-        <ul>
-            <li>
-                <a>conectar botões(F2)</a>
-            </li>
-            <li>
-                <a>abrir perguntas(F3)</a>
-            </li>
+      <ul>
+        <li>
+          <a>conectar botões(F2)</a>
+        </li>
+        <li>
+          <a>abrir perguntas(F3)</a>
+        </li>
 
-            <li>
-                <a>iniciar jogo(F5)</a>
-            </li>
-            <li>
-                <a>tela cheia(F11)</a>
-            </li>
-    </ul>
+        <li>
+          <a>iniciar jogo(F5)</a>
+        </li>
+        <li>
+          <a>tela cheia(F11)</a>
+        </li>
+      </ul>
+    </div>
     <main>
-        <!-- conteudo:perg e resp -->
-        <div class="perg">
-            <p> text perg</p></div>
-        <div class="resp">
-            <ol>
-            <li>resp</li>
-            <li>resp</li>
-            <li>resp</li>
+      <div class="pergunta">
+        <p>Texto da pergunta</p>
+      </div>
+      <div class="respostas">
+        <ol>
+          <li>Resposta</li>
+          <li>Resposta</li>
+          <li>Resposta</li>
+          <li>Resposta</li>
         </ol>
-        </div>
-        <div class="temp">
-            <p>30</p>
-        </div>
-        <div class="botoes">
-            <a>confirmr a resp</a>
-            <a>próx perg</a>
-        </div>
+      </div>
+      <div class="tempo">
+        <p>30</p>
+      </div>
+      <div class="botoes">
+        <a>Confirmar a resposta</a>
+        <a>Próxima pergunta</a>
+      </div>
     </main>
     <footer>
-    <!-- placar -->
-    <P>placa:</P>
-    <p class="pontos-vermelho">0</p>
-    <p>X</p>
-    <p class="pontos-azul">0</p>
+      <div class="placar">
+        <p>Placar:</p>
+        <p class="pontos-vermelho">0</p>
+        <p>X</p>
+        <p class="pontos-azul">0</p>
+      </div>
+      <div class="tempoJogo">
+        <p>Tempo de jogo:</p>
+        <p>MM:SS</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

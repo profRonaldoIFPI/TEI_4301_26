@@ -1,26 +1,85 @@
-*{/* reset */
-    font-family: sans-serif;
-margin:0;
-padding: 0;
+* {
+  /* reset */
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
-body{
-    background-color: cadetblue;
+body {
+  background-color: cadetblue;
 }
-header{
-    padding: 5px;
-    background-color: rgb(185, 221, 221);
-    
+header {
+  padding: 5px;
+  background-color: rgb(185, 221, 221);
+  display: none;
 }
 .menu {
-    background-color: rgb(185, 221, 221);
-    position: absolute;
-    padding: 5px;
-    margin: 2px;
-    box-shadow: 5px 5px 5px #f9fcff;
-    /* display: none; */
+  background-color: rgb(185, 221, 221);
+  position: absolute;
+  padding: 5px;S
+  margin: 2px;
+  box-shadow: 5px 5px 5px #f9fcff;
+  display: none;
 }
-.menu li{
-    list-style: none;
-    margin:5px;
-    /* display: none; */
+.menu li {
+  list-style: none;
+  margin: 5px;
+  /* display: none; */
+}
+main{
+    display: grid;  
+    grid-template-columns: 2fr 1fr;
+/* 
+A linha a cima esta dividindo a tela em 3 frações (fr) sendo a primeira fração com 2/3 da tela e a segunda fração 1/3 da tela.
+*/
+    grid-template-areas: 
+       "pergunta pergunta" 
+       "respostas tempo"
+       "respostas botoes";
+/*
+A linha acima da nomes as frações e como elas ocuparão a tela. 
+2/3 para pergunta + 1/3 para pergunta
+2/3 para respostas + 1/3 para tempo
+2/3 para respostas + 1/3 para botoes
+*/
+}
+main div{ /*todas as divs dentro de main*/
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 8px; 
+    box-shadow: 0px 0px 5px #f9fcffa1;
+    font-size: 1.5em;
+}
+.pergunta{
+    text-align: center;
+    grid-area: pergunta;
+}
+.respostas{
+    text-align: left;
+    grid-area: respostas;
+}
+.respostas ol{
+    list-style-type: lower-alpha;
+    margin-left: 1.2em;
+}
+.tempo{
+    grid-area: tempo;
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+    border: rgb(26, 255, 1) solid 3px;
+}
+.botoes{    
+    grid-area: botoes;
+    display: flex;
+    justify-content: center;
+}
+.botoes a{
+    /* border: red solid 1px; */
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #dfdfdf;
+    box-shadow: 1px 1px 3px black;
 }
