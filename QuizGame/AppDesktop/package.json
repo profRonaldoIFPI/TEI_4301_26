@@ -1,0 +1,17 @@
+{
+  "name": "appdesktop",
+  "version": "1.0.0",
+  "description": "Este diretório contém a estrutura do aplicativo desktop responsável por gerenciar a pontuação, carregar as perguntas, cronometrar as respostas e exibir a interface para os jogadores e o apresentador.",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron . --no-sandbox",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^35.0.0"
+  }
+}
