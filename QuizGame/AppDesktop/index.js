@@ -1,9 +1,13 @@
 //importando recursos das bibliotecas
 const { app, BrowserWindow, Menu } = require("electron");
 
+let win = null; //win AGORA É GLOBAL
+let portaConectada = false;
+let perguntasCarregadas = null;
+
 //configurando a janela
 function createWindow() {
-  const win = new BrowserWindow({
+  win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
@@ -12,7 +16,7 @@ function createWindow() {
       contextIsolation: false,
     },
   });
-  win.loadFile("index.html");
+  win.loadFile("inicio.html");
 }
 
 // Template de personalização do menu
@@ -24,21 +28,28 @@ const menuTemplate = [
         label: "Conectar botões",
         accelerator: "F2",
         click: () => {
-          //TODO: implementar a seleção e conexão com a porta serial do arduíno
+          //TODO: implementar a seleção e conexão com a porta serial do Arduino
+          portaConectada = true; //simulação.
         },
       },
       {
         label: "Abrir perguntas",
         accelerator: "F3",
         click: () => {
-          //TODO: implementar a abertura de um arquivo de perguntas em .json e a troca para a tela de perguntas (index.html).
+          //TODO: implementar a abertura de um arquivo de perguntas em .json e a troca para a tela de perguntas.
+          perguntasCarregadas = {
+            pergunta: "Qual...?",
+            respostas: ["A", "B", "C", "D"],
+            respostaCorreta: "A",
+          };
         },
       },
       {
         label: "Iniciar jogo",
         accelerator: "F5",
         click: () => {
-          //TODO: implementar o início do jogo
+          //TODO: verificar se a porta serial está conectada e se as perguntas foram carregadas.
+          win.loadFile("index.html");
         },
       },
       {
