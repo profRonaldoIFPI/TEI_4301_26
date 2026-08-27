@@ -1,5 +1,6 @@
 //importando recursos das bibliotecas
-const { app, BrowserWindow, Menu } = require("electron");
+// const { app, BrowserWindow, Menu, dialog } = require("electron");
+import { app, BrowserWindow, Menu, dialog } from "electron";
 
 let win = null; //win AGORA É GLOBAL
 let portaConectada = false;
@@ -35,13 +36,17 @@ const menuTemplate = [
       {
         label: "Abrir perguntas",
         accelerator: "F3",
-        click: () => {
-          //TODO: implementar a abertura de um arquivo de perguntas em .json e a troca para a tela de perguntas.
-          perguntasCarregadas = {
-            pergunta: "Qual...?",
-            respostas: ["A", "B", "C", "D"],
-            respostaCorreta: "A",
-          };
+        click: async () => {
+          try {
+            const result = await dialog.showOpenDialog(win, {
+              title: "Abrir arquivo de perguntas",
+              filters: [{ name: "Arquivos JSON", extensions: ".json" }],
+              properties: ["openFile"],
+            });
+            // perguntasCarregadas =
+          } catch (err) {
+            console.log(err);
+          }
         },
       },
       {

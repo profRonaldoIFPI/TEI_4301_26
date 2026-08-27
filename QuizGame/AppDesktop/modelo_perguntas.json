@@ -1,0 +1,12 @@
+[
+  {
+    "pergunta": "O que é ...",
+    "respostas": ["É um...", "É uma...", "É um negocio...", "É uma coisa..."],
+    "respostaCorreta": 1
+  },
+  {
+    "pergunta": "O que é ...",
+    "respostas": ["É um...", "É uma...", "É um negocio...", "É uma coisa..."],
+    "respostaCorreta": 1
+  }
+]

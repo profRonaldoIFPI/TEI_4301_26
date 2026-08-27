@@ -1,0 +1,72 @@
+[
+  {
+    "pergunta": "Qual é o maior planeta do Sistema Solar?",
+    "respostas": ["Saturno", "Júpiter", "Netuno", "Marte"],
+    "respostaCorreta": 1
+  },
+  {
+    "pergunta": "Quem pintou a célebre obra 'Mona Lisa'?",
+    "respostas": [
+      "Leonardo da Vinci",
+      "Michelangelo",
+      "Vincent van Gogh",
+      "Pablo Picasso"
+    ],
+    "respostaCorreta": 0
+  },
+  {
+    "pergunta": "Qual elemento químico é representado pelo símbolo 'Au' na Tabela Periódica?",
+    "respostas": ["Prata", "Alumínio", "Cobre", "Ouro"],
+    "respostaCorreta": 3
+  },
+  {
+    "pergunta": "Qual é a capital do Canadá?",
+    "respostas": ["Toronto", "Vancouver", "Ottawa", "Montreal"],
+    "respostaCorreta": 2
+  },
+  {
+    "pergunta": "Quantos ossos compõem o corpo humano adulto?",
+    "respostas": ["186", "206", "220", "300"],
+    "respostaCorreta": 1
+  },
+  {
+    "pergunta": "Em que ano ocorreu a queda do Muro de Berlim?",
+    "respostas": ["1989", "1991", "1975", "1985"],
+    "respostaCorreta": 0
+  },
+  {
+    "pergunta": "Qual é o oceano mais profundo e de maior extensão da Terra?",
+    "respostas": [
+      "Oceano Atlântico",
+      "Oceano Índico",
+      "Oceano Pacífico",
+      "Oceano Ártico"
+    ],
+    "respostaCorreta": 2
+  },
+  {
+    "pergunta": "Quem é o autor da clássica tragédia 'Romeu e Julieta'?",
+    "respostas": [
+      "Charles Dickens",
+      "William Shakespeare",
+      "Edgar Allan Poe",
+      "Dante Alighieri"
+    ],
+    "respostaCorreta": 1
+  },
+  {
+    "pergunta": "Qual é o animal terrestre mais veloz do mundo?",
+    "respostas": ["Leão", "Antílope", "Guepardo (Chita)", "Leopardo"],
+    "respostaCorreta": 2
+  },
+  {
+    "pergunta": "Qual é a principal função dos glóbulos vermelhos (hemácias) no sangue?",
+    "respostas": [
+      "Combater infecções e agentes invasores",
+      "Promover a coagulação sanguínea",
+      "Produzir anticorpos",
+      "Transportar oxigênio para os tecidos"
+    ],
+    "respostaCorreta": 3
+  }
+]
