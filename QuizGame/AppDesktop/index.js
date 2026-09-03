@@ -1,6 +1,6 @@
 //importando recursos das bibliotecas
-// const { app, BrowserWindow, Menu, dialog } = require("electron");
-import { app, BrowserWindow, Menu, dialog } from "electron";
+const { app, BrowserWindow, Menu, dialog } = require("electron");
+const fs = require("fs");
 
 let win = null; //win AGORA É GLOBAL
 let portaConectada = false;
@@ -43,6 +43,14 @@ const menuTemplate = [
               filters: [{ name: "Arquivos JSON", extensions: ".json" }],
               properties: ["openFile"],
             });
+            if (!result.canceled && result.filePaths > 0) {
+              const caminhoDoArquivo = result.filePaths[0];
+              const conteudoArquivo = fs.readFileSync(
+                caminhoDoArquivo,
+                "utf-8",
+              );
+              const perguntasJson = JSON.parse(conteudoArquivo);
+            }
             // perguntasCarregadas =
           } catch (err) {
             console.log(err);
