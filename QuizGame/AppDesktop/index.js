@@ -40,16 +40,19 @@ const menuTemplate = [
           try {
             const result = await dialog.showOpenDialog(win, {
               title: "Abrir arquivo de perguntas",
-              filters: [{ name: "Arquivos JSON", extensions: ".json" }],
+              filters: [{ name: "Arquivos JSON", extensions: "json" }],
               properties: ["openFile"],
             });
-            if (!result.canceled && result.filePaths > 0) {
+            //testa se a janela não foi fechada e se algum arquivo foi selecionado.
+            if (!result.canceled && result.filePaths.length > 0) {
               const caminhoDoArquivo = result.filePaths[0];
               const conteudoArquivo = fs.readFileSync(
                 caminhoDoArquivo,
                 "utf-8",
               );
-              const perguntasJson = JSON.parse(conteudoArquivo);
+              //garante que o conteúdo será um arquivo JSON válido.
+              perguntasCarregadas = JSON.parse(conteudoArquivo);
+              console.log(perguntasCarregadas);
             }
             // perguntasCarregadas =
           } catch (err) {
