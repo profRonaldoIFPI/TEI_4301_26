@@ -4,7 +4,7 @@ Projeto desenvolvido na aula de **17/09/2026** para a disciplina de **Tópicos E
 
 Este projeto utiliza o ambiente **PlatformIO** para controlar um robô móvel com chassi 2WD (dois motores CC de tração e roda de apoio "boba"), utilizando um **Arduino UNO**, um módulo de comunicação sem fio **Bluetooth HC-05** e uma **Ponte H L298N**.
 
-O robô é controlado através de aplicativo móvel para smartphone (como o *BT Car Controller*), permitindo comandos de movimentação em todas as direções e alteração de faixas de velocidade.
+O robô é controlado através de aplicativo móvel para smartphone Android: [**Bluetooth Car Controller** na Google Play Store](https://play.google.com/store/apps/details?id=com.giristuido.bluetooth.car.controller&pcampaignid=web_share), permitindo comandos de movimentação em todas as direções e alteração de faixas de velocidade.
 
 ---
 
@@ -63,7 +63,7 @@ O aplicativo no smartphone envia caracteres ASCII via Bluetooth para controlar a
 
 ## ⚠️ Observação sobre o arquivo `exemplo_app.ino`
 
-O arquivo [`exemplo_app.ino`](file:///home/rpb/IFPI_26.2/TEI%20-%204301/TEI_4301_26/Aula_1709_Carro_RC_Bluetooth/exemplo_app.ino) presente na raiz deste diretório é apenas um código de referência genérico que acompanha o app Android *BT Car Controller*.
+O arquivo [`exemplo_app.ino`](file:///home/rpb/IFPI_26.2/TEI%20-%204301/TEI_4301_26/Aula_1709_Carro_RC_Bluetooth/exemplo_app.ino) presente na raiz deste diretório é apenas um código de referência genérico que acompanha o app Android [Bluetooth Car Controller](https://play.google.com/store/apps/details?id=com.giristuido.bluetooth.car.controller&pcampaignid=web_share).
 
 **Atenção:** Esse arquivo de exemplo **não** deve ser utilizado diretamente neste robô, pois utiliza mapeamentos de pinos e chamadas seriais diferentes. O código funcional e devidamente ajustado para a nossa montagem está em [`src/main.cpp`](file:///home/rpb/IFPI_26.2/TEI%20-%204301/TEI_4301_26/Aula_1709_Carro_RC_Bluetooth/src/main.cpp).
 
@@ -84,4 +84,6 @@ Este projeto está pronto para compilação com o **PlatformIO**:
    ```bash
    pio run --target upload
    ```
-6. Após gravar, emparelhe seu smartphone com o HC-05 (PIN padrão geralmente `1234` ou `0000`), abra o app de controle Bluetooth e conecte-se ao módulo.
+6. Instale o app [Bluetooth Car Controller na Play Store](https://play.google.com/store/apps/details?id=com.giristuido.bluetooth.car.controller&pcampaignid=web_share) no seu smartphone Android.
+7. Emparelhe o smartphone com o módulo HC-05 via configurações de Bluetooth do aparelho (código PIN padrão usualmente `1234` ou `0000`).
+8. Abra o aplicativo, conecte-se ao HC-05 e controle o robô!
